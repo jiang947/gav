@@ -1,0 +1,5 @@
+include ':sample', ':libaray'
+
+//include 'extension-libresample'
+//project(':extension-libresample').projectDir = new File(rootProject.projectDir, 'extensions/libresample')
+

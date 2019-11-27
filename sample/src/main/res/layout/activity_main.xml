@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <include layout="@layout/status_bar" />
+
+    <TextView
+        android:id="@+id/btn_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toRecordActivity"
+        android:padding="16dp"
+        android:text="视频录制" />
+
+    <TextView
+        android:id="@+id/import_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="importVideo"
+        android:padding="16dp"
+        android:text="导入视频" />
+
+
+    <TextView
+        android:id="@+id/btn_simple_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startSimpleListActivity"
+        android:padding="16dp"
+        android:text="simple list" />
+
+
+    <TextView
+        android:id="@+id/btn_change1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onChangeClick"
+        android:padding="16dp"
+        android:text="照相" />
+
+
+    <TextView
+        android:id="@+id/btn_change2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="extractorImage"
+        android:padding="16dp"
+        android:text="提取图片" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="seek"
+        android:padding="16dp"
+        android:text="seek" />
+</LinearLayout>
+
+

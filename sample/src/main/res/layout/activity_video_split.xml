@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.VideoSplitActivity">
+
+    <com.jsq.gav.widget.VideoEditView
+        android:id="@+id/video_edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="center"
+            android:src="@drawable/ic_close_white_24dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分割片段"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/btn_done"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:scaleType="center"
+            android:src="@drawable/ic_done_white_24dp" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clipChildren="false"
+        tools:itemCount="2"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_image_40dp"
+        tools:orientation="horizontal" />
+
+
+</LinearLayout>

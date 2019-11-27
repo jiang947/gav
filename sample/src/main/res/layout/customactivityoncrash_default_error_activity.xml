@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_more"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tv_title_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="出错了"
+            android:textColor="#3b3b3b"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title_more"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/customactivityoncrash_activity_vertical_margin"
+            android:paddingLeft="@dimen/customactivityoncrash_activity_horizontal_margin"
+            android:paddingRight="@dimen/customactivityoncrash_activity_horizontal_margin"
+            android:paddingTop="@dimen/customactivityoncrash_activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/customactivityoncrash_error_activity_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="40dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_launcher"/>
+
+            <Button
+                android:id="@+id/customactivityoncrash_error_activity_restart_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/black"
+                android:text="重启"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/customactivityoncrash_error_activity_more_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="详情"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

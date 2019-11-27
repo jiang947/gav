@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.VideoEditActivity">
+
+    <Button
+        android:id="@+id/generate_video"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp"
+
+        android:text="生成视频" />
+
+    <com.jsq.gav.widget.VideoEditView
+        android:id="@+id/video_edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="118dp">
+
+
+        <LinearLayout
+            android:id="@+id/section_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/add_subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="字幕"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/add_watermark"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="水印"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="裁剪"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/split_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="分割"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/video_speed_scale"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="倍速"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_play_arrow_white_24dp"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textSize="12sp"
+                    tools:text="24s" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/video_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layoutManager="LinearLayoutManager"
+                    tools:orientation="horizontal" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/choose_filter_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="滤镜" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45" />
+
+                <TextView
+                    android:id="@+id/choose_beauty_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="美颜" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filter_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:layoutManager="LinearLayoutManager"
+                tools:orientation="horizontal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/beauty_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                tools:layoutManager="LinearLayoutManager"
+                tools:orientation="horizontal" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/choose_section_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="段落"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/choose_filter_beauty_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="滤镜"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/choose_effect_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="特效"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="配乐"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="封面"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

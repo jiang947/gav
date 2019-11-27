@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        applicationId "com.jsq.gav.sample"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a'/*, 'x86'*/
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation('com.google.guava:guava:28.1-android') {
+        exclude group: 'com.google.code.findbugs'
+    }
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation('com.google.android.exoplayer:exoplayer:2.9.6') { //2.10.0
+        exclude group: 'com.android.support'
+    }
+    implementation('com.zhihu.android:matisse:0.5.1') {
+        exclude group: 'com.android.support'
+    }
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(':libaray')
+
+
+}

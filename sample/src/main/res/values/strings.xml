@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">gav sample</string>
+    <plurals name="error_over_count">
+        <item quantity="one">You can only select one media file</item>
+        <item quantity="many">You can only select up to %1$d media files</item>
+    </plurals>
+
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">An unexpected error occurred.\nSorry for the inconvenience.</string>
+    <string name="customactivityoncrash_error_activity_unknown_exception">Unknown exception</string>
+    <string name="customactivityoncrash_error_activity_restart_app">重新启动</string>
+    <string name="customactivityoncrash_error_activity_close_app"> 重新启动</string>
+    <string name="customactivityoncrash_error_activity_error_details">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">Close</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">Copy to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">Copied to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">Error information</string>
+</resources>

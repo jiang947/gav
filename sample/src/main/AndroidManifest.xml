@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jsq.gav.sample">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.jsq.gav.sample.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.jsq.gav.sample.ui.AddGiftToVideoActivity"/>
+        <activity android:name="com.jsq.gav.sample.ui.ExtractVideoFramesActivity" />
+        <activity android:name="com.jsq.gav.sample.ui.TestPlay" />
+        <activity android:name="com.jsq.gav.sample.ui.AudioRecordSampleActivity" />
+        <activity
+            android:name="com.jsq.gav.sample.ui.SampleAudioPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.jsq.gav.sample.ui.VideoSplitActivity" />
+        <activity android:name="com.jsq.gav.sample.ui.ExoPlayerTestActivity" />
+        <activity
+            android:name="com.jsq.gav.sample.ui.VideoEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Black" />
+
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <activity
+            android:name="com.jsq.gav.sample.ui.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CameraPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Black" />
+        <activity
+            android:name="com.jsq.gav.sample.ui.RecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Black" />
+        <activity android:name="com.jsq.gav.sample.ui.SimpleListActivity" />
+        <activity android:name="com.jsq.gav.sample.ui.VideoPlayerTestActivity" />
+        <activity
+            android:name="com.jsq.gav.sample.ui.VideoEffectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Black" />
+        <activity android:name="com.jsq.gav.sample.ui.AudioBrowserActivity" />
+        <activity android:name="com.jsq.gav.sample.ui.RenderObj3dHatActivity" />
+        <activity android:name=".ui.LightGiftRenderActivity" />
+        <activity android:name="com.jsq.gav.sample.ui.RenderObj3dPiKaChuActivity" />
+        <activity
+            android:name="com.jsq.gav.sample.ui.TakePictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Black" />
+        <activity
+            android:name="com.jsq.gav.sample.crash.DefaultErrorActivity"
+            android:process=":error_activity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

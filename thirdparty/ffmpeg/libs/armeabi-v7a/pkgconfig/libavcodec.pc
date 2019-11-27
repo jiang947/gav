@@ -1,0 +1,14 @@
+prefix=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg/libs/armeabi-v7a
+includedir=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: 
+Requires.private: libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

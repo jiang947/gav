@@ -1,0 +1,14 @@
+prefix=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg/libs/armeabi-v7a
+includedir=/Users/jiang/AndroidStudioProjects/video_sdk/thirdparty/ffmpeg/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.22.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
